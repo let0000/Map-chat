@@ -39,14 +39,14 @@ export default function KakaoMap() {
         map.setBounds(bounds);
       }
     });
-  }, [map]);
+  }, []);
 
   return (
     <Map
       className="kakao-map"
       center={{
-        lat: 37.566826,
-        lng: 126.9786567,
+        lat: 37.4898688,
+        lng: 126.6876416,
       }}
       style={{
         width: "100%",

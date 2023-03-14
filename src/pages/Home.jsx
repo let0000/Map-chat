@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import KakaoMap from "../components/KakaoMap";
 import "./Home.css";
+import axios from "axios";
+
+const API_KEY = "349ef8676ac1390f954d64434cb8b94c";
 
 export default function Home() {
   const [locationError, setLocationError] = useState(false);
@@ -8,17 +11,33 @@ export default function Home() {
     lat: null,
     lon: null,
   });
+  const [address, setAddress] = useState("");
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
         // 위치 정보 가져오기에 성공한 경우
-        console.log(position);
         setLocation({
           lat: position.coords.latitude,
           lon: position.coords.longitude,
         });
         setLocationError(false);
+
+        axios
+          .get(
+            `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${position.coords.longitude}&y=${position.coords.latitude}&input_coord=WGS84`,
+            {
+              headers: { Authorization: `KakaoAK ${API_KEY}` },
+            }
+          )
+          .then((res) => {
+            console.log(res.data);
+            setAddress(res.data.documents[0].address.address_name);
+          })
+          .catch((err) => {
+            console.log(err);
+            setAddress("");
+          });
       },
       (error) => {
         // 위치 정보 가져오기에 실패한 경우
@@ -39,6 +58,7 @@ export default function Home() {
         <div>
           <p>Lat: {location.lat}</p>
           <p>Lat: {location.lon}</p>
+          <p>주소 : {address}</p>
         </div>
       )}
 
