@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import KakaoMap from "../components/KakaoMap";
 import "./Home.css";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setLocationInfo } from "../features/locationSlice";
 
 const API_KEY = "349ef8676ac1390f954d64434cb8b94c";
 
@@ -12,6 +14,8 @@ export default function Home() {
     lon: null,
   });
   const [address, setAddress] = useState("");
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(
@@ -33,6 +37,13 @@ export default function Home() {
           .then((res) => {
             console.log(res.data);
             setAddress(res.data.documents[0].address.address_name);
+            dispatch(
+              setLocationInfo({
+                lat: position.coords.latitude,
+                lon: position.coords.longitude,
+                address: res.data.documents[0].address.address_name,
+              })
+            );
           })
           .catch((err) => {
             console.log(err);

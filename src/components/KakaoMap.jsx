@@ -2,51 +2,66 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { useSelector } from "react-redux";
+import { selectAddress, selectLat, selectLon } from "../features/locationSlice";
 
 export default function KakaoMap() {
   const [info, setInfo] = useState();
   const [markers, setMarkers] = useState([]);
   const [map, setMap] = useState();
 
+  const locationLat = useSelector(selectLat);
+  const locationLon = useSelector(selectLon);
+  const locationAddress = useSelector(selectAddress);
+
+  let category = "맛집";
+
   useEffect(() => {
     if (!map) return;
 
     const ps = new kakao.maps.services.Places();
 
-    ps.keywordSearch("가좌동 맛집", (data, status, _pagination) => {
-      if (status === kakao.maps.services.Status.OK) {
-        const bounds = new kakao.maps.LatLngBounds();
-        let markers = [];
+    console.log(locationLat);
+    console.log(locationLon);
+    console.log(locationAddress);
 
-        for (var i = 0; i < data.length; i++) {
-          markers.push({
-            position: {
-              lat: data[i].y,
-              lng: data[i].x,
-            },
-            id: data[i].id,
-            name: data[i].place_name,
-            address: data[i].address_name,
-            road_address: data[i].road_address_name,
-            phone: data[i].phone,
-            url: data[i].place_url,
-          });
+    ps.keywordSearch(
+      locationAddress + category,
+      (data, status, _pagination) => {
+        if (status === kakao.maps.services.Status.OK) {
+          const bounds = new kakao.maps.LatLngBounds();
+          let markers = [];
 
-          bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+          for (var i = 0; i < data.length; i++) {
+            markers.push({
+              position: {
+                lat: data[i].y,
+                lng: data[i].x,
+              },
+              id: data[i].id,
+              name: data[i].place_name,
+              address: data[i].address_name,
+              road_address: data[i].road_address_name,
+              phone: data[i].phone,
+              url: data[i].place_url,
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+          }
+          setMarkers(markers);
+
+          map.setBounds(bounds);
         }
-        setMarkers(markers);
-
-        map.setBounds(bounds);
       }
-    });
-  }, []);
+    );
+  }, [category]);
 
   return (
     <Map
       className="kakao-map"
       center={{
-        lat: 37.4898688,
-        lng: 126.6876416,
+        lat: locationLat,
+        lng: locationLon,
       }}
       style={{
         width: "100%",
