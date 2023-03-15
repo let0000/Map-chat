@@ -5,6 +5,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setLocationInfo } from "../features/locationSlice";
 import { setWeatherInfo } from "../features/weatherSlice";
+import Location from "../components/Location";
 
 const KAKAO_API_KEY = "349ef8676ac1390f954d64434cb8b94c";
 const WEATHER_API_KEY = "3d9dc8ab0aeba4bb77554214de6d1ecb";
@@ -90,7 +91,7 @@ export default function Home() {
 
   return (
     <div>
-      {locationError ? (
+      {/* {locationError ? (
         <p>
           위치 정보가 활성화되어 있지 않습니다. 위치정보를 활성화 한 후
           새로고침해주세요
@@ -109,9 +110,10 @@ export default function Home() {
             <p>{Math.round(((weather.temp - 273.15) * 10) / 10)} ℃</p>
           </div>
         </div>
-      )}
+      )} */}
 
       <KakaoMap />
+      <Location />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { useSelector } from "react-redux";
 import { selectAddress, selectLat, selectLon } from "../features/locationSlice";
+import "./KakaoMap.css";
 
 export default function KakaoMap() {
   const [info, setInfo] = useState();
@@ -58,14 +59,10 @@ export default function KakaoMap() {
 
   return (
     <Map
-      className="kakao-map"
+      className="kakao_map"
       center={{
         lat: locationLat,
         lng: locationLon,
-      }}
-      style={{
-        width: "100%",
-        height: "100vh",
       }}
       level={3}
       onCreate={setMap}

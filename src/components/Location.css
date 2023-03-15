@@ -1,0 +1,112 @@
+.location {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  z-index: 1000;
+}
+
+.location_header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.location_address {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.location_address > p {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 0;
+  padding-left: 10px;
+  padding-right: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.location_icons {
+  display: flex;
+  margin-top: 2px;
+  margin: 0 10px;
+}
+
+.location_icons > .MuiSvgIcon-root {
+  padding: 10px;
+  font-size: 25px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 10px;
+}
+
+.location_icons > .MuiSvgIcon-root:hover {
+  cursor: pointer;
+  scale: 1.2;
+  background-color: lightgray;
+}
+
+.location_category {
+  width: 200px;
+  height: 50px;
+}
+
+.location_category_background {
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.location_category_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.location_category_option {
+  display: flex;
+  align-items: center;
+  text-align: start;
+}
+
+.location_category_option:hover {
+  cursor: pointer;
+  font-weight: bold;
+  scale: 1.1;
+}
+
+.location_category_option > .MuiSvgIcon-root {
+  font-size: large;
+}
+
+.location_category_option > p {
+  font-size: small;
+  padding: 10px;
+  margin: 0;
+}
+
+.location_list {
+  display: none;
+  margin-left: 30px;
+  width: 35%;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 85vh;
+}
+
+.location_list_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.location_list_header > .MuiSvgIcon-root:hover {
+  scale: 1.2;
+}
