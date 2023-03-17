@@ -7,6 +7,7 @@ import { selectAddress, selectLat, selectLon } from "../features/locationSlice";
 import "./KakaoMap.css";
 
 export default function KakaoMap() {
+  const [me, setMe] = useState();
   const [info, setInfo] = useState();
   const [markers, setMarkers] = useState([]);
   const [map, setMap] = useState();
@@ -67,6 +68,25 @@ export default function KakaoMap() {
       level={3}
       onCreate={setMap}
     >
+      <MapMarker
+        position={{
+          lat: locationLat,
+          lng: locationLon,
+        }}
+        image={{
+          src: "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png",
+          size: new kakao.maps.Size(24, 35),
+          alt: "내 위치",
+        }}
+        onMouseOver={() => setMe({ name: "현재 위치" })}
+        onMouseOut={() => setMe(null)}
+      >
+        {me && (
+          <div className="kakao_map_info">
+            <p>{me.name}</p>
+          </div>
+        )}
+      </MapMarker>
       {markers.map((marker) => (
         <MapMarker
           key={`marker-${marker.name}-${marker.position.lat},${marker.position.lng}`}
@@ -74,7 +94,7 @@ export default function KakaoMap() {
           onClick={() => setInfo(marker)}
         >
           {info && info.id === marker.id && (
-            <div className="kakao-map-info">
+            <div className="kakao_map_info">
               <p>{marker.name}</p>
             </div>
           )}

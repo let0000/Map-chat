@@ -1,12 +1,14 @@
 .location {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: sticky;
   z-index: 1000;
 }
 
 .location_header {
   position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
 }
@@ -48,6 +50,7 @@
 }
 
 .location_category {
+  z-index: 1000;
   width: 200px;
   height: 50px;
 }
@@ -90,13 +93,16 @@
 
 .location_list {
   display: none;
+  position: absolute;
+  top: 90px;
   margin-left: 30px;
-  width: 35%;
   overflow: scroll;
+  width: 330px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   height: 85vh;
+  z-index: 999;
 }
 
 .location_list_header {
@@ -109,4 +115,26 @@
 
 .location_list_header > .MuiSvgIcon-root:hover {
   scale: 1.2;
+}
+
+.location_list_simple {
+  position: absolute;
+  top: 90px;
+  margin-left: 30px;
+  z-index: 999;
+}
+
+.location_list_simple > .MuiSvgIcon-root {
+  padding: 10px;
+  font-size: 25px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 10px;
+}
+
+.location_list_simple > .MuiSvgIcon-root:hover {
+  cursor: pointer;
+  scale: 1.2;
+  background-color: lightgray;
 }
