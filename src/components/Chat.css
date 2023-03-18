@@ -19,7 +19,7 @@
 
 .chat_icon > .MuiSvgIcon-root:hover {
   scale: 1.2;
-  background-color: lightgray;
+  background-color: lightcyan;
 }
 
 .chat_container {
@@ -123,7 +123,7 @@
 
 .chat_container_footer_option:hover {
   cursor: pointer;
-  background-color: lightgray;
+  background-color: lightcyan;
   font-weight: bold;
 }
 

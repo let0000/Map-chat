@@ -1,9 +1,12 @@
 /*global kakao*/
-import React from "react";
+import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCategory } from "../features/categorySlice";
+import { selectFocus, setFocusInfo } from "../features/focusSlice";
 import { selectAddress, selectLat, selectLon } from "../features/locationSlice";
+import { setSearchListInfo } from "../features/searchListSlice";
 import "./KakaoMap.css";
 
 export default function KakaoMap() {
@@ -12,19 +15,18 @@ export default function KakaoMap() {
   const [markers, setMarkers] = useState([]);
   const [map, setMap] = useState();
 
+  const dispatch = useDispatch();
   const locationLat = useSelector(selectLat);
   const locationLon = useSelector(selectLon);
   const locationAddress = useSelector(selectAddress);
-
-  let category = "맛집";
+  const category = useSelector(selectCategory);
+  const focus = useSelector(selectFocus);
 
   useEffect(() => {
     if (!map) return;
 
     const ps = new kakao.maps.services.Places();
 
-    console.log(locationLat);
-    console.log(locationLon);
     console.log(locationAddress);
 
     ps.keywordSearch(
@@ -45,18 +47,39 @@ export default function KakaoMap() {
               address: data[i].address_name,
               road_address: data[i].road_address_name,
               phone: data[i].phone,
-              url: data[i].place_url,
             });
 
             bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
           }
           setMarkers(markers);
+          dispatch(
+            setSearchListInfo({
+              list: markers,
+            })
+          );
 
           map.setBounds(bounds);
         }
       }
     );
-  }, [category]);
+  }, [locationAddress, category]);
+
+  useEffect(() => {
+    if (!focus) return;
+
+    const clickedMarker = markers.find((marker) => marker.id === focus);
+    setInfo(clickedMarker);
+  }, [focus]);
+
+  const handleMarkerClick = (marker) => {
+    setInfo(marker);
+
+    dispatch(
+      setFocusInfo({
+        focus: marker.id,
+      })
+    );
+  };
 
   return (
     <Map
@@ -91,7 +114,7 @@ export default function KakaoMap() {
         <MapMarker
           key={`marker-${marker.name}-${marker.position.lat},${marker.position.lng}`}
           position={marker.position}
-          onClick={() => setInfo(marker)}
+          onClick={() => handleMarkerClick(marker)}
         >
           {info && info.id === marker.id && (
             <div className="kakao_map_info">

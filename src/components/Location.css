@@ -46,7 +46,7 @@
 .location_icons > .MuiSvgIcon-root:hover {
   cursor: pointer;
   scale: 1.2;
-  background-color: lightgray;
+  background-color: lightcyan;
 }
 
 .location_category {
@@ -96,7 +96,6 @@
   position: absolute;
   top: 90px;
   margin-left: 30px;
-  overflow: scroll;
   width: 330px;
   background-color: white;
   border-radius: 5px;
@@ -111,6 +110,11 @@
   align-items: center;
   padding: 0 15px;
   border-bottom: 1px solid lightgrey;
+}
+
+.location_list_body {
+  max-height: 78vh;
+  overflow-y: auto;
 }
 
 .location_list_header > .MuiSvgIcon-root:hover {
@@ -136,5 +140,5 @@
 .location_list_simple > .MuiSvgIcon-root:hover {
   cursor: pointer;
   scale: 1.2;
-  background-color: lightgray;
+  background-color: lightcyan;
 }

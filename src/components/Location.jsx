@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   BackspaceTwoTone,
   DiningOutlined,
-  Forward,
   ForwardOutlined,
   HotelOutlined,
   LocalCafeOutlined,
@@ -21,6 +20,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectAddress, setLocationInfo } from "../features/locationSlice";
 import { setWeatherInfo } from "../features/weatherSlice";
 import axios from "axios";
+import { selectCategory, setCategoryInfo } from "../features/categorySlice";
+import { selectList } from "../features/searchListSlice";
+import SearchItem from "./SearchItem";
 
 const KAKAO_API_KEY = "349ef8676ac1390f954d64434cb8b94c";
 const WEATHER_API_KEY = "3d9dc8ab0aeba4bb77554214de6d1ecb";
@@ -28,25 +30,18 @@ const WEATHER_API_KEY = "3d9dc8ab0aeba4bb77554214de6d1ecb";
 export default function Location() {
   const [openCategory, setOpenCategory] = useState(false);
   const [refresh, setRefresh] = useState(false);
-  const [category, setCategory] = useState("");
   const [openList, setOpenList] = useState(false);
   const [hideList, setHideList] = useState(false);
-  const [location, setLocation] = useState({
-    lat: null,
-    lon: null,
-  });
 
   const dispatch = useDispatch();
   const address = useSelector(selectAddress);
+  const category = useSelector(selectCategory);
+  const list = useSelector(selectList);
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
         // 위치 정보 가져오기에 성공한 경우
-        setLocation({
-          lat: position.coords.latitude,
-          lon: position.coords.longitude,
-        });
 
         axios
           .get(
@@ -109,9 +104,14 @@ export default function Location() {
   };
 
   const handleCategory = (e) => {
-    setCategory(e.currentTarget.children[1].innerText);
+    dispatch(
+      setCategoryInfo({
+        category: e.currentTarget.children[1].innerText,
+      })
+    );
     setOpenList(true);
     setHideList(true);
+    console.log(list);
   };
 
   const handleCloseList = () => {
@@ -234,9 +234,25 @@ export default function Location() {
           style={{ display: openList ? "block" : "none" }}
         >
           <div className="location_list_header">
-            <h4> 주변 {category} 검색 결과</h4>
+            <h4>
+              {" "}
+              주변 '{category}' 검색 결과 {list.length} 건
+            </h4>
             <BackspaceTwoTone onClick={handleCloseList} />
           </div>
+          {list ? (
+            <div className="location_list_body">
+              {list.map((item) => (
+                <SearchItem
+                  id={item.id}
+                  name={item.name}
+                  address={item.address}
+                  road_address={item.road_address}
+                  phone={item.phone}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
       ) : (
         <div
