@@ -72,31 +72,48 @@
 }
 
 .chat_container_body_help {
-  position: absolute;
-  top: 20px;
-  left: 10px;
+  display: flex;
+  align-items: flex-start;
+  max-width: 70%;
+  margin: 20px 10px;
   background-color: lightgreen;
   border-radius: 5px;
   padding: 0 20px;
 }
 
 .chat_container_body_question {
-  position: absolute;
-  top: 100px;
-  right: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 28%;
+  margin-right: 10px;
+  max-width: 70%;
   background-color: lightcyan;
   border-radius: 5px;
   padding: 0 20px;
 }
 
 .chat_container_body_anwser {
-  position: absolute;
-  top: 190px;
-  left: 10px;
-  max-width: 80%;
+  display: flex;
+  align-items: flex-start;
+  max-width: 70%;
+  margin: 15px 10px;
   background-color: lightgreen;
   border-radius: 5px;
   padding: 0 20px;
+}
+
+.chat_container_body_loading {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 10px;
+  max-width: 10%;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.chat_container_body_anwser > h4 {
+  white-space: pre-line;
 }
 
 .chat_container_footer {
@@ -129,4 +146,62 @@
 
 .chat_container_footer_option > h4 {
   margin-left: 10px;
+}
+
+.chat_container_after {
+  flex: 0.1;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+
+.chat_container_after_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.chat_container_after_option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.chat_container_after_option:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+  font-weight: bold;
+}
+
+.chat_container_after_option > h4 {
+  margin-left: 10px;
+}
+
+.chat_container_footer_direct {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.chat_container_footer_input {
+  flex: 0.8;
+}
+
+.chat_container_footer_input > input {
+  width: 95%;
+  height: 50px;
+  font-size: large;
+}
+
+.chat_container_footer_button {
+  flex: 0.2;
+}
+
+.mui_button {
+  height: 55px;
+  font-size: large;
 }

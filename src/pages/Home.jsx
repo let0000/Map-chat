@@ -15,5 +15,3 @@ export default function Home() {
     </div>
   );
 }
-
-// openWeatherMap API 를이용해서 현재 기온 받아오기

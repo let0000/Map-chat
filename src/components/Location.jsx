@@ -234,10 +234,7 @@ export default function Location() {
           style={{ display: openList ? "block" : "none" }}
         >
           <div className="location_list_header">
-            <h4>
-              {" "}
-              주변 '{category}' 검색 결과 {list.length} 건
-            </h4>
+            <h4> 주변 '{category}' 검색 결과</h4>
             <BackspaceTwoTone onClick={handleCloseList} />
           </div>
           {list ? (
