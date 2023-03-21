@@ -72,6 +72,7 @@ export default function KakaoMap() {
   }, [focus]);
 
   const handleMarkerClick = (marker) => {
+    console.log("클릭");
     setInfo(marker);
 
     dispatch(

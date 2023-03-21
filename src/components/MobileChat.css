@@ -1,0 +1,202 @@
+.mobilechat {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  z-index: 999;
+  bottom: 10px;
+  right: 10px;
+}
+
+.mobilechat_icon > .MuiSvgIcon-root {
+  padding: 10px;
+  font-size: 35px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 10px;
+}
+
+.mobilechat_container {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  height: 75vh;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 10px;
+}
+
+.mobilechat_container_header {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.mobilechat_container_header > img {
+  object-fit: contain;
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 20px;
+  flex: 0.1;
+}
+
+.mobilechat_container_header > h4 {
+  flex: 0.8;
+  font-size: small;
+}
+
+.mobilechat_container_header > .MuiSvgIcon-root {
+  flex: 0.1;
+}
+
+.mobilechat_container_body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: scroll;
+  flex: 0.8;
+}
+
+.mobilechat_container_body_help {
+  display: flex;
+  align-items: flex-start;
+  max-width: 60%;
+  margin: 20px 10px;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.mobilechat_container_body_help > h4 {
+  font-size: small;
+}
+
+.mobilechat_container_body_question {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 28%;
+  margin-right: 10px;
+  max-width: 60%;
+  background-color: lightcyan;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.mobilechat_container_body_question > h4 {
+  font-size: small;
+}
+
+.mobilechat_container_body_anwser {
+  display: flex;
+  align-items: flex-start;
+  max-width: 60%;
+  margin: 15px 10px;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.mobilechat_container_body_loading {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 10px;
+  max-width: 10%;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.mobilechat_container_body_anwser > h4 {
+  font-size: small;
+  white-space: pre-line;
+}
+
+.mobilechat_container_footer {
+  flex: 0.2;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+
+.mobilechat_container_footer_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.mobilechat_container_footer_option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mobilechat_container_footer_option > h4 {
+  font-size: small;
+  margin-left: 10px;
+}
+
+.mobilechat_container_after {
+  flex: 0.1;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+
+.mobilechat_container_after_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.mobilechat_container_after_option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mobilechat_container_after_option:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+  font-weight: bold;
+}
+
+.mobilechat_container_after_option > h4 {
+  font-size: small;
+  margin-left: 10px;
+}
+
+.mobilechat_container_footer_direct {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mobilechat_container_footer_input {
+  flex: 0.8;
+}
+
+.mobilechat_container_footer_input > input {
+  width: 95%;
+  height: 50px;
+  font-size: large;
+}
+
+.mobilechat_container_footer_button {
+  flex: 0.2;
+}
+
+.mui_button {
+  height: 55px;
+  font-size: small;
+}

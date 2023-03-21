@@ -22,7 +22,7 @@ export default function Weather() {
                 src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
                 alt="날씨 이미지"
               />
-              {Math.round(((temp - 273.15) * 10) / 10)} ℃
+              {Math.round(((temp - 273.15) * 10) / 10)} °
               <small>{weather}</small>
             </p>
           </div>

@@ -4,14 +4,14 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectAddress } from "../features/locationSlice";
 import { selectTemp } from "../features/weatherSlice";
-import "./Chat.css";
+import "./MobileChat.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@mui/material";
 
 const GPT_API_KEY = "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";
 const GPT_API_URL = `https://api.openai.com/v1/engines/text-davinci-003/completions`;
 
-export default function Chat() {
+export default function MobileChat() {
   const [openChat, setOpenChat] = useState(false); // 채팅창을 열기 위한 변수
   const [answer, setAnswer] = useState(""); // GPT의 대답을 담는 변수
   const [question, setQuestion] = useState(""); // 선택한 질문을 담는 변수
@@ -93,10 +93,10 @@ export default function Chat() {
   };
 
   return (
-    <div className="chat">
+    <div className="mobilechat">
       {openChat ? (
-        <div className="chat_container">
-          <div className="chat_container_header">
+        <div className="mobilechat_container">
+          <div className="mobilechat_container_header">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/180px-ChatGPT_logo.svg.png"
               alt="chatGPT 이미지"
@@ -104,23 +104,23 @@ export default function Chat() {
             <h4>Chat GPT</h4>
             <CloseOutlined onClick={() => setOpenChat(false)} />
           </div>
-          <div className="chat_container_body">
-            <div className="chat_container_body_help">
+          <div className="mobilechat_container_body">
+            <div className="mobilechat_container_body_help">
               <h4>질문을 선택해주세요</h4>
             </div>
             <div
-              className="chat_container_body_question"
+              className="mobilechat_container_body_question"
               style={{ display: question ? "inline-block" : "none" }}
             >
               <h4>{question}</h4>
             </div>
             {loading ? (
-              <div className="chat_container_body_loading">
+              <div className="mobilechat_container_body_loading">
                 <CircularProgress />
               </div>
             ) : (
               <div
-                className="chat_container_body_anwser"
+                className="mobilechat_container_body_anwser"
                 style={{ display: question ? "inline-block" : "none" }}
               >
                 <h4>{answer}</h4>
@@ -128,18 +128,18 @@ export default function Chat() {
             )}
           </div>
           {after ? (
-            <div className="chat_container_after">
-              <div className="chat_container_after_row">
+            <div className="mobilechat_container_after">
+              <div className="mobilechat_container_after_row">
                 <div
                   onClick={() => handleOptionClick(option)}
-                  className="chat_container_after_option"
+                  className="mobilechat_container_after_option"
                 >
                   <h4>다시 물어보기</h4>
                 </div>
 
                 <div
                   onClick={handleOptionReset}
-                  className="chat_container_after_option"
+                  className="mobilechat_container_after_option"
                 >
                   <h4>다른 질문하기</h4>
                 </div>
@@ -147,19 +147,19 @@ export default function Chat() {
             </div>
           ) : (
             <div
-              className="chat_container_footer"
+              className="mobilechat_container_footer"
               style={{ flex: direct ? "0.1" : "0.2" }}
             >
               {direct ? (
-                <div className="chat_container_footer_direct">
-                  <div className="chat_container_footer_input">
+                <div className="mobilechat_container_footer_direct">
+                  <div className="mobilechat_container_footer_input">
                     <input
                       type="text"
                       value={inputQuestion}
                       onChange={(e) => setInputQuestion(e.target.value)}
                     />
                   </div>
-                  <div className="chat_container_footer_button">
+                  <div className="mobilechat_container_footer_button">
                     <Button
                       onClick={() => handleOptionClick("question")}
                       className="mui_button"
@@ -170,33 +170,33 @@ export default function Chat() {
                   </div>
                 </div>
               ) : (
-                <div className="chat_container_footer_question">
-                  <div className="chat_container_footer_row">
+                <div className="mobilechat_container_footer_question">
+                  <div className="mobilechat_container_footer_row">
                     <div
                       onClick={() => handleOptionClick("clothing")}
-                      className="chat_container_footer_option"
+                      className="mobilechat_container_footer_option"
                     >
                       <h4>입을 옷 추천해줘</h4>
                     </div>
 
                     <div
                       onClick={() => handleOptionClick("restaurant")}
-                      className="chat_container_footer_option"
+                      className="mobilechat_container_footer_option"
                     >
                       <h4>주변 맛집 추천해줘</h4>
                     </div>
                   </div>
-                  <div className="chat_container_footer_row">
+                  <div className="mobilechat_container_footer_row">
                     <div
                       onClick={() => handleOptionClick("about")}
-                      className="chat_container_footer_option"
+                      className="mobilechat_container_footer_option"
                     >
                       <h4>Chat GPT가 뭐야</h4>
                     </div>
 
                     <div
                       onClick={() => setDirect(true)}
-                      className="chat_container_footer_option"
+                      className="mobilechat_container_footer_option"
                     >
                       <h4>직접 질문하기</h4>
                     </div>
@@ -207,7 +207,7 @@ export default function Chat() {
           )}
         </div>
       ) : (
-        <div className="chat_icon">
+        <div className="mobilechat_icon">
           <CommentOutlined onClick={() => setOpenChat(true)} />
         </div>
       )}
