@@ -9,7 +9,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@mui/material";
 
 const GPT_API_KEY = process.env.REACT_APP_GPT_API_KEY;
-const GPT_API_URL = `https://cors-anywhere.herokuapp.com/https://api.openai.com/v1/engines/text-davinci-003/completions`;
+const GPT_API_URL = `https://cohttps://cors.bridged.cc/https://api.openai.com/v1/engines/text-davinci-003/completions`;
 
 export default function Chat() {
   const [openChat, setOpenChat] = useState(false); // 채팅창을 열기 위한 변수
