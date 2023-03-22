@@ -57,8 +57,6 @@ export default function Chat() {
       headers: {
         Authorization: `Bearer ${GPT_API_KEY}`,
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin":
-          "https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app",
       },
     };
 
