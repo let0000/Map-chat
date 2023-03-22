@@ -8,7 +8,7 @@ import "./Chat.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@mui/material";
 
-const GPT_API_KEY = "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";
+const GPT_API_KEY = "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";
 const GPT_API_URL = `https://api.openai.com/v1/engines/text-davinci-003/completions`;
 
 export default function Chat() {
