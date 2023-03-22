@@ -53,7 +53,7 @@ export default function Chat() {
     console.log(question);
 
     const axiosConfig = {
-      withCredentials: true,
+      withCredentials: false,
       headers: {
         Authorization: `Bearer ${GPT_API_KEY}`,
         "Content-Type": "application/json",
