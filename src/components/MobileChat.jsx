@@ -8,7 +8,7 @@ import "./MobileChat.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@mui/material";
 
-const GPT_API_KEY = "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";
+const GPT_API_KEY = "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";
 const GPT_API_URL = `https://api.openai.com/v1/engines/text-davinci-003/completions`;
 
 export default function MobileChat() {
