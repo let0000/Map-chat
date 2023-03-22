@@ -8,9 +8,6 @@ import "./Chat.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@mui/material";
 
-const GPT_API_KEY = process.env.REACT_APP_GPT_API_KEY;
-const GPT_API_URL = `https://api.openai.com/v1/engines/text-davinci-003/completions`;
-
 export default function Chat() {
   const [openChat, setOpenChat] = useState(false); // 채팅창을 열기 위한 변수
   const [answer, setAnswer] = useState(""); // GPT의 대답을 담는 변수
@@ -50,26 +47,13 @@ export default function Chat() {
 
     setQuestion(prompt);
 
-    console.log(question);
-
-    const axiosConfig = {
-      headers: {
-        Authorization: `Bearer ${GPT_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-    };
-
     await axios
-      .post(
-        GPT_API_URL,
-        {
-          prompt: prompt,
-          max_tokens: 1000,
-          temperature: 0.5,
-          n: 1,
-        },
-        axiosConfig
-      )
+      .post("api/v1/engines/text-davinci-003/completions", {
+        prompt: prompt,
+        max_tokens: 1000,
+        temperature: 0.5,
+        n: 1,
+      })
       .then((response) => {
         console.log(response.data);
         const result = response.data.choices[0].text;
