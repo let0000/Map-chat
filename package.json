@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "set REACT_APP_GPT_API_KEY=process.env.REACT_APP_GPT_API_KEY && set REACT_APP_KAKAOMAP_API_KEY=process.env.REACT_APP_KAKAOMAP_API_KEY",
+    "prebuild": "set REACT_APP_GPT_API_KEY=process.env.REACT_APP_GPT_API_KEY",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
