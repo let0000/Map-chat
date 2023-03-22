@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://let0000.github.io/mapChat/",
+  "homepage": "https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
