@@ -53,9 +53,11 @@ export default function Chat() {
     console.log(question);
 
     const axiosConfig = {
+      withCredentials: true,
       headers: {
         Authorization: `Bearer ${GPT_API_KEY}`,
         "Content-Type": "application/json",
+        Origin: "https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app",
       },
     };
 
