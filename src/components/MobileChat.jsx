@@ -48,11 +48,8 @@ export default function MobileChat() {
     setQuestion(prompt);
 
     await axios
-      .post("api/v1/engines/text-davinci-003/completions", {
+      .post("http://localhost:5000/api", {
         prompt: prompt,
-        max_tokens: 1000,
-        temperature: 0.5,
-        n: 1,
       })
       .then((response) => {
         console.log(response.data);

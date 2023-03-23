@@ -48,12 +48,12 @@ export default function Chat() {
     setQuestion(prompt);
 
     await axios
-      .post("api/v1/engines/text-davinci-003/completions", {
-        prompt: prompt,
-        max_tokens: 1000,
-        temperature: 0.5,
-        n: 1,
-      })
+      .post(
+        "https://port-0-mapchat-server-nx562olfjdzyc7.sel3.cloudtype.app/api",
+        {
+          prompt: prompt,
+        }
+      )
       .then((response) => {
         console.log(response.data);
         const result = response.data.choices[0].text;
