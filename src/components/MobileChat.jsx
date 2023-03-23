@@ -77,7 +77,7 @@ export default function MobileChat() {
   };
 
   return (
-    <div className="mobilechat">
+    <div className="mobilechat" style={{ zIndex: openChat ? "1000" : "998" }}>
       {openChat ? (
         <div className="mobilechat_container">
           <div className="mobilechat_container_header">
