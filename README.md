@@ -93,12 +93,11 @@
 ### 👌 날씨 정보
 
 <p align='center'>
-  <img width='400px' src = "https://user-images.githubusercontent.com/21376061/227173782-73631056-2f50-408b-be72-3a34c2015061.png"/>
+  <img src = "https://user-images.githubusercontent.com/21376061/227177132-666b2cbe-e7ee-4804-b911-05d422c1e7b0.png"/>
 </p>
 
 
-* 카카오 키워드 검색을 이용하여 검색한 리스트를 받아 올 수 있습니다.
-* 카카오맵 sdk 를 이용하여 현재위치와 검색한 리스트의 위치를 지도에 표시 할 수 있습니다.
+* openwatherMap API 를 통해 위도와 경도값으로 현재 날씨와 기온을 받아 올 수 있습니다.
 
 
 ## 🌟 배포
