@@ -24,14 +24,14 @@
     
 ## 🌟 주요 기능
 
-### 👌 로그인
+### 👌 위치 정보
 
 <p align='center'>
   <img src="https://i.imgur.com/6Op9ffA.png"/>
 </p>
 
-* 구글 계정으로 OAuth인증을 통해 로그인 할 수 있습니다.
-* AWS의 cognito를 이용해서 인증하고 앱에 할당된 AWS 리소스 접근권한을 얻습니다. 
+* geolocation 을 이용하여 현재 위치의 경도 , 위도 값을 가져올 수 있습니다.
+* axios 를 이용하여 경도와 위도 값으로 카카오 API와 통신하여 현재의 주소 값을 얻어올 수 있습니다. 
 1. cognito의 소셜로그인 활용 인증 및 로그인
 
 <p align='center'>
