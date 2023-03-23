@@ -2,12 +2,12 @@
 
 ## 🌟 서비스 소개
 <p align='center'>
-<img width='200px' src='https://user-images.githubusercontent.com/21376061/227160347-99b0d147-8c54-4bc5-b5de-2ae51e99ef48.png'>
+<img width='400px' src='https://user-images.githubusercontent.com/21376061/227160347-99b0d147-8c54-4bc5-b5de-2ae51e99ef48.png'>
 </p>
 
-⏱ 하루동안 한 일을 기록하면 유용한 정보들을 시각화해서 보여주는 웹 어플리케이션 ⏱
+   현재 위치의 주소와 날씨를 가져와서 가져온 정보들로 GPT 에게 정보를 물어보는 웹 어플리케이션
 
-배포 : [https://lifemanager.pkiop.me](https://lifemanager.pkiop.me)
+배포 : [https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app](https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app)
 
 <p align='center'>
     <img src="https://img.shields.io/badge/Typescript-v4.0.3-blue?logo=typescript"/>
