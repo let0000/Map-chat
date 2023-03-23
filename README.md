@@ -145,13 +145,13 @@
 
 ## 🌟 반응형 웹
 
-### 👌 PC 화면
+### 🧐 PC 화면
 
 <p align='center'>
   <img width='500px' src = "https://user-images.githubusercontent.com/21376061/227180035-bb950c06-f0e6-4ff0-bbe0-af928c59a13a.png"/>
 </p>
 
-### 👌 모바일 화면
+### 🧐 모바일 화면
 
 <p align='center'>
   <img width='300px' src = "https://user-images.githubusercontent.com/21376061/227180153-e6fecc95-c715-4890-9066-3b2fb2d640ee.png"/>
