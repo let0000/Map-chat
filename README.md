@@ -34,17 +34,21 @@
 * axios 를 이용하여 경도와 위도 값으로 카카오 API와 통신하여 현재의 주소 값을 얻어올 수 있습니다. 
 
 <p align='center'>
-  <img src="https://user-images.githubusercontent.com/21376061/227169377-9636f4a5-14a6-459a-8f74-2513156860a5.png"/>
+  <img src="https://user-images.githubusercontent.com/21376061/227169213-a8f3cb94-2e04-4d1d-b2ae-5d0792539d6e.png"/>
 </p>
 
 * 새로고침 버튼을 통해 현재 위치와 주소를 새로 받아 올 수 있습니다.
 
 <p align='center'>
-  <img src="https://user-images.githubusercontent.com/21376061/227169377-9636f4a5-14a6-459a-8f74-2513156860a5.png"/>
-  <img src="https://user-images.githubusercontent.com/21376061/227169377-9636f4a5-14a6-459a-8f74-2513156860a5.png"/>
+  <img src="https://user-images.githubusercontent.com/21376061/227169304-33dc8b88-c581-4397-b795-6bd40b414197.png"/>
+</p>
+<p align='center'>
+ <img src="https://user-images.githubusercontent.com/21376061/227169645-50fdf4c0-9975-45c5-8a5c-15a40b332aab.png"/>
 </p>
 
 * 위치검색 버튼에 마우스를 올려 주변 원하는 장소를 검색 할 수 있습니다. 
+
+### 👌 위치 검색
 
 <p align='center'>
   <img src="https://i.imgur.com/cayJ1tS.png"/>
