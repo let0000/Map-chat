@@ -90,6 +90,7 @@
 
 * 열기 버튼을 통해 리스트를 다시 나타낼 수 있습니다.
 
+
 ### 👌 날씨 정보
 
 <p align='center'>
@@ -100,18 +101,67 @@
 * openwatherMap API 를 통해 위도와 경도값으로 현재 날씨와 기온을 받아 올 수 있습니다.
 
 
+### 👌 GPT 질문 기능
+
+<p align='center'>
+  <img width='300px' src = "https://user-images.githubusercontent.com/21376061/227177654-c95f47fa-7bc1-4014-b7f2-333eaed49272.png"/>
+</p>
+
+
+* openAI API 통신을 이용하여 GPT 에게 질문을 할 수 있습니다.
+* 아래 질문들을 선택하여 GPT 에게 대답을 들을 수 있습니다.
+
+<p align='center'>
+  <img src = "https://user-images.githubusercontent.com/21376061/227177561-e729117f-c219-44de-89fc-b641787aebfc.png"/>
+</p>
+
+
+* 우측 상단 닫기 버튼을 통해 질문창을 열고 닫을 수 있습니다.
+
+
+<p align='center'>
+  <img width='300px' src = "https://user-images.githubusercontent.com/21376061/227177927-73fd19ae-accc-4ec8-a028-136af1523fa6.png"/>
+</p>
+
+
+* 질문을 선택하면 대답이 오기 전까지 로딩중을 나타냅니다.
+
+
+<p align='center'>
+  <img width='300px' src = "https://user-images.githubusercontent.com/21376061/227177837-dd2676cd-f11e-4274-aa84-471f9e36a17f.png"/>
+</p>
+
+
+* GPT가 대답을 해주면 다시 물어보거나 다른 질문을 선택할 수 있습니다.
+
+
+<p align='center'>
+  <img width='300px' src = "https://user-images.githubusercontent.com/21376061/227178035-41c60e1a-e310-487e-904f-36c05a9630d3.png"/>
+</p>
+
+
+* 직접 질문하기를 선택하면 직접 원하는 질문을 입력할 수 있습니다.
+
+
+## 🌟 반응형 웹
+
+### 👌 PC 화면
+
+<p align='center'>
+  <img width='500px' src = "https://user-images.githubusercontent.com/21376061/227180035-bb950c06-f0e6-4ff0-bbe0-af928c59a13a.png"/>
+</p>
+
+### 👌 모바일 화면
+
+<p align='center'>
+  <img width='300px' src = "https://user-images.githubusercontent.com/21376061/227180153-e6fecc95-c715-4890-9066-3b2fb2d640ee.png"/>
+</p>
+
 ## 🌟 배포
 
-![image](https://user-images.githubusercontent.com/34783156/104201255-e465a580-546c-11eb-9dc9-5fd9e05aba38.png)
+<p align='center'>
+  <img width='400px' src = "https://user-images.githubusercontent.com/21376061/227180679-8af64a55-9e9f-4c09-a27c-f6dc4db01461.png"/>
+</p>
 
-* pkiop.me DNS를 Route53으로 설정한 후 배포 S3에 연결된 CloudFront로 보내도록 설정합니다.
-* CloudFront에서 SSL 인증을 해서 https로만 앱에 접근 가능하도록 합니다.
-* S3의 Static Web Hosting을 이용해서 Frontend 앱을 배포합니다.
-* 앱에서 인증 / DB데이터 조작이 필요할 때마다 AWS Cognito, AppSync 서비스를 활용해서 해당 기능을 이용합니다.
-
-## History
-
-[v1.5.1](https://github.com/pkiop/lifemanager/wiki/v1.5.1)  
-[v2.0.0](https://github.com/pkiop/lifemanager/wiki/v2.0.0)  
-[v3.0.0](https://github.com/pkiop/lifemanager/wiki/v3.0.0)  
-[v4.0.0](https://github.com/pkiop/lifemanager/wiki/v4.0.0) 
+* Front와 Server를 각각 github 저장소에 저장합니다.
+* Cloudtype 을 이용하여 각각의 앱을 배포합니다.
