@@ -48,9 +48,12 @@ export default function MobileChat() {
     setQuestion(prompt);
 
     await axios
-      .post("http://localhost:5000/api", {
-        prompt: prompt,
-      })
+      .post(
+        "https://port-0-mapchat-server-nx562olfjdzyc7.sel3.cloudtype.app/api",
+        {
+          prompt: prompt,
+        }
+      )
       .then((response) => {
         console.log(response.data);
         const result = response.data.choices[0].text;
