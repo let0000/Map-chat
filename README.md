@@ -9,11 +9,6 @@
 
 배포 : [https://lifemanager.pkiop.me](https://lifemanager.pkiop.me)
 
-### [개발 배경](https://github.com/pkiop/lifemanager/wiki/%EA%B0%9C%EB%B0%9C-%EB%B0%B0%EA%B2%BD)
-
-### [WIKI](https://github.com/pkiop/lifemanager/wiki)
-
-
 <p align='center'>
     <img src="https://img.shields.io/badge/Typescript-v4.0.3-blue?logo=typescript"/>
     <img src="https://img.shields.io/badge/React-v17.0.1-blue?logo=React"/>
