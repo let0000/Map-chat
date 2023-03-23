@@ -2,7 +2,7 @@
 
 ## 🌟 서비스 소개
 <p align='center'>
-<img width='200px' src='https://i.imgur.com/hpneYdE.png)'>
+<img width='200px' src='https://user-images.githubusercontent.com/21376061/227160347-99b0d147-8c54-4bc5-b5de-2ae51e99ef48.png'>
 </p>
 
 ⏱ 하루동안 한 일을 기록하면 유용한 정보들을 시각화해서 보여주는 웹 어플리케이션 ⏱
