@@ -51,80 +51,55 @@
 ### 👌 위치 검색
 
 <p align='center'>
-  <img src="https://i.imgur.com/cayJ1tS.png"/>
+  <img width='400px' src = "https://user-images.githubusercontent.com/21376061/227173782-73631056-2f50-408b-be72-3a34c2015061.png"/>
 </p>
 
-2. 해당 인증 정보로 앱 AWS 리소스 접근
+
+* 카카오 키워드 검색을 이용하여 검색한 리스트를 받아 올 수 있습니다.
+* 카카오맵 sdk 를 이용하여 현재위치와 검색한 리스트의 위치를 지도에 표시 할 수 있습니다.
+
 
 <p align='center'>
-  <img width='400px' src="https://i.imgur.com/2fauXLL.png"/>
+  <img src = "https://user-images.githubusercontent.com/21376061/227172086-9f019e22-9ec7-449d-8c00-711c753c24c6.png"/>
 </p>
 
-### 👌 메인 페이지 
+
+* 마커를 클릭하여 클릭한 마커의 정보를 얻을 수 있습니다.
 
 <p align='center'>
-  <img src="https://i.imgur.com/OfcRKIR.png"/>
+  <img src = "https://user-images.githubusercontent.com/21376061/227172176-dc509dc7-bf9a-4091-9f83-29ff54662aed.png"/>
 </p>
 
-#### 🧐 날짜 선택
+
+* 클릭한 마커가 어떤 아이템인지 리스트에서 확인할 수 있습니다.
+
 
 <p align='center'>
-  <img src="https://i.imgur.com/ZwZ7NaV.png"/>
+  <img width='300px' src="https://user-images.githubusercontent.com/21376061/227172487-e6736b4c-10cb-471a-a5c1-11f058aca02e.png"/>
 </p>
 
-* 확인하고 싶은 날짜를 선택합니다.
 
-#### 🧐 로그아웃
+* 받아온 리스트를 화면에 띄울 수 있습니다.
+* 우측 상단의 닫기 버튼을 통해 리스트를 숨길 수 있습니다.
+
 
 <p align='center'>
-  <img src="https://i.imgur.com/0XwLErm.png"/>
+  <img src="https://user-images.githubusercontent.com/21376061/227172340-dc2962fd-1aec-43c8-9860-9868f8419e9a.png"/>
 </p>
 
-* 로그아웃 버튼을 눌러 로그아웃 할 수 있습니다.
 
-#### 🧐 목표와 진행상황 확인
+* 열기 버튼을 통해 리스트를 다시 나타낼 수 있습니다.
+
+### 👌 날씨 정보
 
 <p align='center'>
-  <img src="https://i.imgur.com/ft58UEm.png"/>
+  <img width='400px' src = "https://user-images.githubusercontent.com/21376061/227173782-73631056-2f50-408b-be72-3a34c2015061.png"/>
 </p>
 
-* 사용자별로 설정한 목표에 따라 진행상황 / 목표까지 남은 시간을 계산한 결과를 보여줍니다.
 
-#### 🧐 카테고리별 진행상황 시각화
+* 카카오 키워드 검색을 이용하여 검색한 리스트를 받아 올 수 있습니다.
+* 카카오맵 sdk 를 이용하여 현재위치와 검색한 리스트의 위치를 지도에 표시 할 수 있습니다.
 
-<p align='center'>
-  <img src="https://i.imgur.com/JM5UECe.png"/>
-</p>
-
-* billboard.js 라이브러리 활용해서 카테고리별로 지정한 색에 따라 한눈에 진행상황 확인할 수 있도록 파이 그래프를 보여줍니다.
-
-#### 🧐 기록 확인
-
-<p align='center'>
-  <img width='300px' src="https://i.imgur.com/gH3vhi2.png"/>
-</p>
-
-* 로그인한 유저 & 선택한 날짜에 해당하는 기록들을 보여줍니다.
-
-#### 🧐 기록 입력
-
-<p align='center'>
-  <img src="https://i.imgur.com/MAvCAkA.png"/>
-  <img src="https://i.imgur.com/4PaVjla.png"/>
-</p>
-
-* 하단 바의 + 버튼을 눌러 기록을 추가할 수 있습니다.
-* 제목, 시작시간, 종료시간(선택), 카테고리, 활용한 시간인지 여부를 입력하고 Add Recode를 클릭하면 기록이 추가됩니다.
-* 잘못된 입력에 대해서 에러메세지를 보여줍니다.
-
-#### 🧐 기록 수정 및 삭제
-
-<p align='center'>
-  <img src="https://i.imgur.com/UmHAlBL.gif"/>
-</p>
-
-* 수정을 원하는 기록을 클릭하면 해당 기록을 수정할 수 있습니다.
-* Delete 버튼을 눌러 기록을 삭제할 수 있습니다.
 
 ## 🌟 배포
 
