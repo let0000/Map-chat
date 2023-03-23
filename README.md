@@ -9,6 +9,8 @@
 
 배포 : [https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app](https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app)
 
+서버 : [https://github.com/let0000/mapchat_server](https://github.com/let0000/mapchat_server)
+
 <p align='center'>
     <img src="https://img.shields.io/badge/react-v18.2.0-61DAFB?logo=React"/>
    <img src="https://img.shields.io/badge/react responsive-v9.0.2-61DAFB?logo=React"/>
