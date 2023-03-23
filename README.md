@@ -10,14 +10,14 @@
 배포 : [https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app](https://web-map-chat-nx562olfjdzyc7.sel3.cloudtype.app)
 
 <p align='center'>
-    <img src="https://img.shields.io/badge/Typescript-v4.0.3-blue?logo=typescript"/>
-    <img src="https://img.shields.io/badge/React-v17.0.1-blue?logo=React"/>
-    <img src="https://img.shields.io/badge/styled components-v5.2.1-pink?logo=react">
-    <img src="https://img.shields.io/badge/storybook-v6.1.10-ff69b4?logo=storybook"/>
-    <img src="https://img.shields.io/badge/aws amplify-v3.3.13-orange?logo=amazon"/>
-    <img src="https://img.shields.io/badge/aws appsync-v4.0.1-orange?logo=amazon"/>
-    <img src="https://img.shields.io/badge/graphql-v15.4.0-pink?logo=graphql">
-    <img src="https://img.shields.io/badge/apollo/client-v3.3.6-violet?">
+    <img src="https://img.shields.io/badge/react-v18.2.0-61DAFB?logo=React"/>
+   <img src="https://img.shields.io/badge/react responsive-v9.0.2-61DAFB?logo=React"/>
+   <img src="https://img.shields.io/badge/@reduxjs/toolkit-^1.9.3-764ABC?logo=Redux"/>
+   <img src="https://img.shields.io/badge/react redux-^8.0.5-764ABC?logo=Redux"/>
+    <img src="https://img.shields.io/badge/@mui/material-^5.11.13-007fff?logo=mui"/>
+   <img src="https://img.shields.io/badge/@mui/icons material-^5.11.11-007fff?logo=mui"/>
+   <img src="https://img.shields.io/badge/axios-^1.3.4-5A29E4?logo=Axios"/>
+   <img src="https://img.shields.io/badge/react kakao maps sdk-^1.1.6-ffcd00?logo=Kakao"/>
 </p>
     
 ## 🌟 주요 기능
